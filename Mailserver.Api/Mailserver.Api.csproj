@@ -184,7 +184,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Controllers\MailController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -276,6 +276,16 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mailserver.Core\Mailserver.Core.csproj">
+      <Project>{B999251C-0586-49AB-999B-F64F6E59D1FF}</Project>
+      <Name>Mailserver.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mailserver.Service\Mailserver.Service.csproj">
+      <Project>{18F94763-A483-4763-B263-75B21C2220F6}</Project>
+      <Name>Mailserver.Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

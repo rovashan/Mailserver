@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Mailserver.Core
+namespace Mailserver.Core.Entities.Base
 {
-    public class Class1
+    public abstract class BaseEntity
     {
+        public int Id { get; set; }
     }
 }
