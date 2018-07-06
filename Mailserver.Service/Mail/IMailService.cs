@@ -9,6 +9,6 @@ namespace Mailserver.Service.Mail
 {
     public interface IMailService
     {
-        IEnumerable<Email> GetMail();
+        IEnumerable<Email> GetMailByLabel(string label);
     }
 }

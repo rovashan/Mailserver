@@ -9,6 +9,11 @@ namespace Mailserver.Core.Entities
 {
     public class Email : BaseEntity
     {
+        public string Subject { get; set; }
         public string Body { get; set; }
+        public string From { get; set; }
+        public string To { get; set; }
+        public string Label { get; set; }
+        public DateTime EmailDate { get; set; }
     }
 }

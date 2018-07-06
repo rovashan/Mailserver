@@ -12,6 +12,7 @@ namespace Mailserver.Api
             // Web API configuration and services
 
             // Web API routes
+            config.EnableCors();
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
@@ -23,6 +24,8 @@ namespace Mailserver.Api
             config.Formatters.XmlFormatter.SupportedMediaTypes.Clear();
             config.Formatters.JsonFormatter.SerializerSettings.Formatting =
                 Newtonsoft.Json.Formatting.Indented;
+
+            //config.MapHttpAttributeRoutes();
         }
     }
 }

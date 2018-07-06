@@ -47,6 +47,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\201807060948200_email.cs" />
+    <Compile Include="Migrations\201807060948200_email.Designer.cs">
+      <DependentUpon>201807060948200_email.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807060953263_email2.cs" />
+    <Compile Include="Migrations\201807060953263_email2.Designer.cs">
+      <DependentUpon>201807060953263_email2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807061235435_email3.cs" />
+    <Compile Include="Migrations\201807061235435_email3.Designer.cs">
+      <DependentUpon>201807061235435_email3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MyContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -56,12 +69,22 @@
     </None>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Mailserver.Core\Mailserver.Core.csproj">
       <Project>{B999251C-0586-49AB-999B-F64F6E59D1FF}</Project>
       <Name>Mailserver.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201807060948200_email.resx">
+      <DependentUpon>201807060948200_email.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807060953263_email2.resx">
+      <DependentUpon>201807060953263_email2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807061235435_email3.resx">
+      <DependentUpon>201807061235435_email3.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

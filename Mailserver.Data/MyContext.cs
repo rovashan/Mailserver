@@ -8,12 +8,14 @@ using Mailserver.Core.Entities;
 
 namespace Mailserver.Data
 {
-    public class MyContext : DbContext
+    public class MyContext : DbContext, IDisposable //override dispose
+
+
     {
 
         public MyContext() : base("MydbConn")
         {
-            Database.SetInitializer<MyContext>(new CreateDatabaseIfNotExists<MyContext>());
+           // Database.SetInitializer<MyContext>(new CreateDatabaseIfNotExists<MyContext>());
         }
 
         public virtual DbSet<Email> Emails { get; set; }
