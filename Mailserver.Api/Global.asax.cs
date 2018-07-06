@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Mailserver.Service.Mail;
+using SimpleInjector;
+using SimpleInjector.Integration.WebApi;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -18,6 +21,12 @@ namespace Mailserver.Api
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            var container = new Container();
+            container.Register<IMailService, MailService>();
+            container.Verify();
+
+            GlobalConfiguration.Configuration.DependencyResolver = new SimpleInjectorWebApiDependencyResolver(container);
         }
     }
 }
