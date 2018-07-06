@@ -17,6 +17,7 @@ namespace Mailserver.Data.Migrations
                         From = c.String(),
                         To = c.String(),
                         Label = c.String(),
+                        EmailDate = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             
